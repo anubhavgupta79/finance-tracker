@@ -1,0 +1,18 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif;}
+body{background:#f9fafb;color:#111;}
+.page{display:none;padding:20px;}
+.page.active{display:block;}
+.login-card{max-width:300px;margin:100px auto;padding:20px;border:1px solid #ddd;border-radius:8px;text-align:center;background:#fff;}
+.login-card input{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:6px;}
+.btn{background:#2563eb;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer;}
+.btn.small{padding:6px 12px;font-size:14px;}
+.navbar{display:flex;justify-content:space-between;align-items:center;background:#2563eb;color:#fff;padding:10px 20px;}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:20px 0;}
+.card{background:#fff;border:1px solid #ddd;padding:15px;border-radius:8px;text-align:center;}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;max-width:700px;margin:auto;}
+.form input,.form select{padding:8px;border:1px solid #ccc;border-radius:6px;}
+.transactions table{width:100%;border-collapse:collapse;margin-top:15px;}
+.transactions th,.transactions td{border:1px solid #ddd;padding:8px;text-align:center;}
+.charts{max-width:800px;margin:30px auto;}
+canvas{margin:20px 0;max-width:100%;}
+@media(max-width:600px){.form{grid-template-columns:1fr;}}
