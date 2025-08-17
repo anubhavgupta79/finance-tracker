@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="loginPage" class="page active">
+    <div class="login-card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required/>
+        <input type="password" id="password" placeholder="Password" required/>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p>Demo: <b>admin / 1234</b></p>
+    </div>
+  </div>
+
+  <div id="dashboardPage" class="page">
+    <header class="navbar">
+      <h1>💰 Budget Tracker</h1>
+      <button id="logoutBtn" class="btn small">Logout</button>
+    </header>
+
+    <section class="summary">
+      <div class="card">Income: ₹<span id="totalIncome">0</span></div>
+      <div class="card">Expenses: ₹<span id="totalExpenses">0</span></div>
+      <div class="card">Savings: ₹<span id="totalSavings">0</span></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Add Transaction</h2>
+      <form id="txnForm" class="form">
+        <input type="text" id="desc" placeholder="Description" required/>
+        <input type="number" id="amount" placeholder="Amount" required/>
+        <select id="type" required>
+          <option value="">Type</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <select id="category" required>
+          <option value="">Category</option>
+          <option>Salary</option>
+          <option>Food</option>
+          <option>Rent</option>
+          <option>Shopping</option>
+          <option>Transport</option>
+          <option>Other</option>
+        </select>
+        <button type="submit" class="btn">Add</button>
+      </form>
+    </section>
+
+    <section class="transactions">
+      <h2>Transactions</h2>
+      <table>
+        <thead><tr><th>Description</th><th>Amount</th><th>Type</th><th>Category</th></tr></thead>
+        <tbody id="txnTable"></tbody>
+      </table>
+    </section>
+
+    <section class="charts">
+      <h2>Overview</h2>
+      <canvas id="pieChart"></canvas>
+      <canvas id="lineChart"></canvas>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
